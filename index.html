@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      #bgpia {
+        background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20210529/pngtree-abstract-geometric-large-small-tiled-background-image_722677.jpg");
+      }
+
+      .senar {
+        transition: transform 0.2s ease-in-out;
+      }
+      .senar:active {
+        transform: scale(1) translateY(2px);
+      }
+
+      .toots {
+        transition: transform 0.2s ease;
+      }
+
+      .toots:active {
+        transform: scale(1) translateY(2px);
+      }
+
+      #bgdr {
+        background-image: url("https://img.freepik.com/premium-photo/happy-people-dance-nightclub-party-concert_31965-14393.jpg?size=626&ext=jpg&ga=GA1.1.1413502914.1696896000&semt=ais");
+      }
+
+      .getar {
+        transition: transform 0.2s ease;
+      }
+
+      .getar:active {
+        transform: scale(1) translateY(2px);
+      }
+    </style>
+    <script>
+      // gitar
+      let audioC = new Audio();
+      audioC.src = "audio/C.mp3";
+
+      let audioAm = new Audio();
+      audioAm.src = "audio/Am.mp3";
+
+      let audioDm = new Audio();
+      audioDm.src = "audio/Dm.mp3";
+
+      let audioG = new Audio();
+      audioG.src = "audio/G.mp3";
+
+      // piano
+      let audioDo = new Audio();
+      audioDo.src = "audio/Do.mp3";
+
+      let audioRe = new Audio();
+      audioRe.src = "audio/Re.mp3";
+
+      let audioMi = new Audio();
+      audioMi.src = "audio/Mi.mp3";
+
+      let audioFa = new Audio();
+      audioFa.src = "audio/Fa.mp3";
+
+      let audioSo = new Audio();
+      audioSo.src = "audio/So.mp3";
+
+      let audioLa = new Audio();
+      audioLa.src = "audio/La.mp3";
+
+      let audioSi = new Audio();
+      audioSi.src = "audio/Si.mp3";
+
+      let audioDo2 = new Audio();
+      audioDo2.src = "audio/Do2.mp3";
+
+      let audioC2 = new Audio();
+      audioC2.src = "audio/C2.mp3";
+
+      let audioD2 = new Audio();
+      audioD2.src = "audio/D2.mp3";
+
+      let audioF2 = new Audio();
+      audioF2.src = "audio/F2.mp3";
+
+      let audioG2 = new Audio();
+      audioG2.src = "audio/G2.mp3";
+
+      let audioA2 = new Audio();
+      audioA2.src = "audio/A2.mp3";
+
+      //drum
+      let audioHo = new Audio();
+      audioHo.src = "audio/ho.mp3";
+
+      let audioHh = new Audio();
+      audioHh.src = "audio/hh.mp3";
+
+      let audioCr = new Audio();
+      audioCr.src = "audio/Cr.mp3";
+
+      let audioSd = new Audio();
+      audioSd.src = "audio/Sd.mp3";
+
+      let audioSs = new Audio();
+      audioSs.src = "audio/Ss.mp3";
+
+      let audioTom1 = new Audio();
+      audioTom1.src = "audio/tom1.mp3";
+
+      let audioFt = new Audio();
+      audioFt.src = "audio/ft.mp3";
+
+      let audioRide = new Audio();
+      audioRide.src = "audio/ride.mp3";
+
+      let audioBass = new Audio();
+      audioBass.src = "audio/bass.mp3";
+
+      let audioTom2 = new Audio();
+      audioTom2.src = "audio/tom2.mp3";
+
+      let audioHf = new Audio();
+      audioHf.src = "audio/hf.mp3";
+    </script>
+  </head>
+  <body>
+    <!-- gitar -->
+    <div
+      id="bggit"
+      class="absolute mx-5 my-5 bg-cover bg-center bg-no-repeat w-[1110px] h-[260px] blur-sm rounded-3xl"
+      style="background-image: url('https://cdn1.katadata.co.id/media/images/thumb/2023/05/30/CHEAT_GUITAR_HERO_PS2-2023_05_30-12_36_54_748891ec991748410c94381e35708c45_960x640_thumb.png')"
+    ></div>
+    <div class="bg-pink-500 relative z-20 left-28 h-80 w-80 rounded-full flex justify-center items-center mt-3 mb-10 mx-2">
+      <div id="gitar" class="flex w-36 h-36 rounded-full bg-slate-700 border-yellow-500 border-8"></div>
+    </div>
+
+    <div class="bg-sky-500 w-[470px] left-[430px] top-[137px] absolute flex h-[70px]"></div>
+    <div id="senar1" class="senar duration-150 w-[735px] h-1 bg-yellow-500 absolute cursor-pointer transform top-[147px] left-[215px] z-30" onclick="playGuitar('C')"></div>
+    <div id="senar2" class="senar duration-150 w-[740px] h-1 bg-yellow-500 absolute cursor-pointer transform top-[162px] left-[210px] z-30" onclick="playGuitar('Am')"></div>
+    <div id="senar3" class="senar duration-150 w-[740px] h-1 bg-yellow-500 absolute cursor-pointer transform top-[176px] left-[210px] z-30" onclick="playGuitar('Dm')"></div>
+    <div id="senar4" class="senar duration-150 w-[735px] h-1 bg-yellow-500 absolute cursor-pointer transform top-[192px] left-[215px] z-30" onclick="playGuitar('G')"></div>
+    <div class="bg-pink-700 absolute py-6 left-[900px] top-[123px] h-24 w-24 rounded-se-full rounded-ee-full flex text-6xl justify-center flex-row">
+      <div class="h-[50px] bg-black w-1.5 z-40"></div>
+    </div>
+
+    <!-- piano -->
+    <div id="bgpia" class="w-[60%] h-[250px] flex absolute rounded-3xl mx-[20%] blur-sm"></div>
+    <div id="piano" class="relative top-[30px] flex justify-center">
+      <div class="flex relative cursor-pointer">
+        <div class="bg-black w-[32px] h-[125px] box-border z-50 absolute left-[48px] flex flex-col items-center justify-end pb-1 active:bg-red-500 active:mt-0.5 text-white" onclick="playPiano('C2')">C#</div>
+        <div class="bg-black w-[32px] h-[125px] box-border z-50 absolute left-[113px] flex flex-col items-center justify-end pb-1 active:bg-orange-500 active:mt-0.5 text-white" onclick="playPiano('D2')">D#</div>
+        <div class="bg-black w-[32px] h-[125px] box-border z-50 absolute left-[240px] flex flex-col items-center justify-end pb-1 active:bg-green-500 active:mt-0.5 text-white" onclick="playPiano('F2')">F#</div>
+        <div class="bg-black w-[32px] h-[125px] box-border z-50 absolute left-[305px] flex flex-col items-center justify-end pb-1 active:bg-blue-500 active:mt-0.5 text-white" onclick="playPiano('G2')">G#</div>
+        <div class="bg-black w-[32px] h-[125px] box-border z-50 absolute left-[370px] flex flex-col items-center justify-end pb-1 active:bg-pink-500 active:mt-0.5 text-white" onclick="playPiano('A2')">A#</div>
+      </div>
+      <div class="flex cursor-pointer">
+        <div class="toots bg-white w-[64px] h-[200px] border-black border-2 box-border active:bg-red-400 flex flex-col items-center justify-end pb-1 rounded-s-3xl" onclick="playPiano('Do')">Do</div>
+        <div class="toots bg-white w-[64px] h-[200px] border-black border-2 box-border active:bg-orange-400 flex flex-col items-center justify-end pb-1" onclick="playPiano('Re')">Re</div>
+        <div class="toots bg-white w-[64px] h-[200px] border-black border-2 box-border active:bg-yellow-400 flex flex-col items-center justify-end pb-1" onclick="playPiano('Mi')">Mi</div>
+        <div class="toots bg-white w-[64px] h-[200px] border-black border-2 box-border active:bg-green-400 flex flex-col items-center justify-end pb-1" onclick="playPiano('Fa')">Fa</div>
+        <div class="toots bg-white w-[64px] h-[200px] border-black border-2 box-border active:bg-blue-400 flex flex-col items-center justify-end pb-1" onclick="playPiano('So')">So</div>
+        <div class="toots bg-white w-[64px] h-[200px] border-black border-2 box-border active:bg-pink-400 flex flex-col items-center justify-end pb-1" onclick="playPiano('La')">La</div>
+        <div class="toots bg-white w-[64px] h-[200px] border-black border-2 box-border active:bg-purple-400 flex flex-col items-center justify-end pb-1" onclick="playPiano('Si')">Si</div>
+        <div class="toots bg-white w-[64px] h-[200px] border-black border-2 box-border active:bg-violet-400 flex flex-col items-center justify-end pb-1 rounded-e-3xl" onclick="playPiano('Do2')">Do^</div>
+      </div>
+    </div>
+
+    <!-- Drum -->
+    <div id="bgdr" class="cursor-pointer w-[100%] h-[470px] -z-50 mb-5 mt-[100px] rounded-ss-full rounded-ee-full absolute blur-sm bg-no-repeat bg-contain bg-center opacity-75"></div>
+    <div
+      id="hihat-open"
+      class="mt-14 getar cursor-pointer absolute flex w-48 h-48 rounded-full bg-gradient-to-br from-amber-500 to-amber-900 shadow-xl shadow-black top-[670px] left-[12%] justify-center items-center"
+      onclick="playDrum('Ho')"
+    >
+      ⚫
+    </div>
+    <div id="hihat" class="mt-14 getar cursor-pointer absolute flex w-48 h-48 rounded-full bg-gradient-to-br from-amber-500 to-amber-900 shadow-2xl shadow-black top-[720px] -z-10 left-[10%]" onclick="playDrum('Hh')"></div>
+    <div id="crash" class="mt-14 getar cursor-pointer absolute flex w-52 h-52 rounded-full bg-gradient-to-r from-amber-500 to-amber-900 shadow-xl shadow-black top-[610px] left-[28%] justify-center items-center" onclick="playDrum('Cr')">
+      ⚫
+    </div>
+    <div
+      id="share-drum"
+      class="mt-14 transition-all duration-300 active:scale-110 cursor-pointer absolute flex w-60 h-60 rounded-full bg-gradient-to-b from-cyan-800 to-cyan-900 shadow-2xl shadow-black top-[730px] left-[25%] -z-30 justify-center items-center outline-dashed font-bold font-serif text-base text-white"
+      onclick="playDrum('Sd')"
+    >
+      ShareDrum
+    </div>
+    <div
+      id="share-stick"
+      class="mt-14 transition-all duration-300 active:scale-110 cursor-pointer absolute flex w-44 h-44 rounded-full bg-gradient-to-b from-cyan-800 to-cyan-900 shadow-2xl shadow-black top-[890px] left-[25%] -z-40 justify-center items-center outline-dashed font-bold font-serif text-xs text-white"
+      onclick="playDrum('Ss')"
+    >
+      ShareStick
+    </div>
+    <div
+      id="tom1"
+      class="mt-14 transition-all duration-300 active:scale-110 cursor-pointer absolute flex w-44 h-44 rounded-full bg-gradient-to-br from-cyan-800 to-cyan-900 shadow-2xl shadow-black top-[690px] left-[43%] -z-30 justify-center items-center outline-dashed font-bold font-serif text-base text-white"
+      onclick="playDrum('Tom1')"
+    >
+      Tom1
+    </div>
+    <div
+      id="floortom"
+      class="mt-14 transition-all duration-300 active:scale-110 cursor-pointer absolute flex w-36 h-36 rounded-full bg-gradient-to-br from-cyan-800 to-cyan-900 shadow-2xl shadow-black top-[700px] left-[58%] -z-30 outline-dashed text-white font-bold font-serif text-xs justify-center items-center"
+      onclick="playDrum('Ft')"
+    >
+      FloorTom
+    </div>
+    <div id="ride" class="mt-14 getar cursor-pointer absolute flex w-72 h-72 rounded-full bg-gradient-to-br from-amber-500 to-amber-900 shadow-xl shadow-black top-[600px] left-[70%] justify-center items-center" onclick="playDrum('Ride')">
+      ⚫
+    </div>
+    <div
+      id="bass"
+      class="mt-14 transition-all duration-300 active:scale-110 cursor-pointer absolute flex w-72 h-72 rounded-full bg-gradient-to-bl from-zinc-800 to-zinc-900 shadow-2xl shadow-black top-[840px] left-[37%] -z-50 justify-center items-center outline-dashed font-bold font-serif text-lg text-white"
+      onclick="playDrum('Bass')"
+    >
+      Bass
+    </div>
+    <div
+      id="tom2"
+      class="mt-14 transition-all duration-300 active:scale-110 cursor-pointer absolute flex w-60 h-60 rounded-full bg-gradient-to-br from-cyan-800 to-cyan-900 shadow-2xl shadow-black top-[780px] left-[55%] -z-50 justify-center items-center outline-dashed font-bold font-serif text-base text-white"
+      onclick="playDrum('Tom2')"
+    >
+      Tom2
+    </div>
+    <div
+      id="hf"
+      class="mt-14 transition-all duration-300 active:scale-110 cursor-pointer absolute flex w-36 h-36 rounded-full bg-gradient-to-bl from-zinc-800 to-zinc-950 shadow-2xl shadow-black top-[860px] -z-20 left-[15%] justify-center items-center text-white text-sm outline-dashed font-bold font-serif"
+      onclick="playDrum('Hf')"
+    >
+      HhF
+    </div>
+
+    <script>
+      function playGuitar(chord) {
+        switch (chord) {
+          case "C":
+            audioC.load();
+            audioC.pause();
+            audioC.currentTime = 1;
+            audioC.play();
+            break;
+          case "Am":
+            audioAm.load();
+            audioAm.pause();
+            audioAm.currentTime = 1;
+            audioAm.play();
+            break;
+          case "Dm":
+            audioDm.load();
+            audioDm.pause();
+            audioDm.currentTime = 1;
+            audioDm.play();
+            break;
+          case "G":
+            audioG.load();
+            audioG.pause();
+            audioG.currentTime = 1;
+            audioG.play();
+            break;
+        }
+      }
+
+      function playPiano(key) {
+        switch (key) {
+          case "C2":
+            audioC2.currentTime = 0;
+            audioC2.play();
+            break;
+          case "D2":
+            audioD2.currentTime = 0;
+            audioD2.play();
+            break;
+          case "F2":
+            audioF2.currentTime = 0;
+            audioF2.play();
+            break;
+          case "G2":
+            audioG2.currentTime = 0;
+            audioG2.play();
+            break;
+          case "A2":
+            audioA2.currentTime = 0;
+            audioA2.play();
+            break;
+          case "Do":
+            audioDo.currentTime = 0;
+            audioDo.play();
+            break;
+          case "Re":
+            audioRe.currentTime = 0;
+            audioRe.play();
+            break;
+          case "Mi":
+            audioMi.currentTime = 0;
+            audioMi.play();
+            break;
+          case "Fa":
+            audioFa.currentTime = 0;
+            audioFa.play();
+            break;
+          case "So":
+            audioSo.currentTime = 0;
+            audioSo.play();
+            break;
+          case "La":
+            audioLa.currentTime = 0;
+            audioLa.play();
+            break;
+          case "Si":
+            audioSi.currentTime = 0;
+            audioSi.play();
+            break;
+          case "Do2":
+            audioDo2.currentTime = 0;
+            audioDo2.play();
+            break;
+        }
+      }
+
+      function playDrum(jedar) {
+        switch (jedar) {
+          case "Ho":
+            audioHo.currentTime = 0;
+            audioHo.play();
+            break;
+          case "Hh":
+            audioHh.currentTime = 0;
+            audioHh.play();
+            break;
+          case "Cr":
+            audioCr.currentTime = 0;
+            audioCr.play();
+            break;
+          case "Sd":
+            audioSd.currentTime = 0;
+            audioSd.play();
+            break;
+          case "Ss":
+            audioSs.currentTime = 0;
+            audioSs.play();
+            break;
+          case "Tom1":
+            audioTom1.currentTime = 0;
+            audioTom1.play();
+            break;
+          case "Ft":
+            audioFt.currentTime = 0;
+            audioFt.play();
+            break;
+          case "Ride":
+            audioRide.currentTime = 0;
+            audioRide.play();
+            break;
+          case "Bass":
+            audioBass.currentTime = 0;
+            audioBass.play();
+            break;
+          case "Tom2":
+            audioTom2.currentTime = 0;
+            audioTom2.play();
+            break;
+          case "Hf":
+            audioHf.currentTime = 0;
+            audioHf.play();
+            break;
+        }
+      }
+
+      document.addEventListener("keypress", function () {
+        switch (event.key) {
+          // gitar
+          case "a":
+            playGuitar("C");
+            break;
+          case "s":
+            playGuitar("Am");
+            break;
+          case "d":
+            playGuitar("Dm");
+            break;
+          case "f":
+            playGuitar("G");
+            break;
+          // piano
+          case "g":
+            playPiano("C2");
+            break;
+          case "h":
+            playPiano("D2");
+            break;
+          case "j":
+            playPiano("F2");
+            break;
+          case "k":
+            playPiano("G2");
+            break;
+          case "l":
+            playPiano("A2");
+            break;
+          case "z":
+            playPiano("Do");
+            break;
+          case "x":
+            playPiano("Re");
+            break;
+          case "c":
+            playPiano("Mi");
+            break;
+          case "v":
+            playPiano("Fa");
+            break;
+          case "b":
+            playPiano("So");
+            break;
+          case "n":
+            playPiano("La");
+            break;
+          case "m":
+            playPiano("Si");
+            break;
+          case ",":
+            playPiano("Do2");
+            break;
+          // drum
+          case "q":
+            playDrum("Ho");
+            break;
+          case "w":
+            playDrum("Hh");
+            break;
+          case "e":
+            playDrum("Cr");
+            break;
+          case "r":
+            playDrum("Sd");
+            break;
+          case "t":
+            playDrum("Ss");
+            break;
+          case "y":
+            playDrum("Tom1");
+            break;
+          case "u":
+            playDrum("Ft");
+            break;
+          case "i":
+            playDrum("Ride");
+            break;
+          case "o":
+            playDrum("Bass");
+            break;
+          case "p":
+            playDrum("Tom2");
+            break;
+          case "[":
+            playDrum("Hf");
+            break;
+        }
+      });
+    </script>
+  </body>
+</html>
